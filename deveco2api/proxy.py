@@ -289,8 +289,7 @@ async def _stream_response(
                 except json.JSONDecodeError:
                     pass
                 yield f"data: {payload}\n\n"
-            else:
-                yield f"{line}\n"
+            # 跳过 id: / event: 等非 data: 的 SSE 字段，保持 OpenAI 标准格式
     finally:
         await upstream.aclose()
 
