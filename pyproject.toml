@@ -1,0 +1,14 @@
+[project]
+name = "deveco2api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "httpx>=0.28.0",
+    "requests>=2.32.0",
+    "colorlog>=6.9.0",
+    "tomli-w>=1.0.0",
+]
